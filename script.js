@@ -32,10 +32,28 @@ Olá, me fale dois números para que eu possa fazer as equações matemáticas.
 Clique em OK para começar.
 `)
 
-let number1 = Number(prompt(`Me fale o primeiro número:`));
-let number2 = Number(prompt(`Me fale o segundo número:`));
+let number1
+let number2
 
 
+while (true) {
+  number1 = (prompt(`Me fale o primeiro número:`));
+  if (!isNaN(parseInt(number1))) {
+    break;
+  }
+  alert("Resposta inválida, por favor digite um número válido.")
+} 
+
+while (true) {
+  number2 = (prompt(`Me fale o segundo número:`));
+  if (!isNaN(parseInt(number2))) {
+    break;
+  }
+  alert("Resposta inválida, por favor digite um número válido.")
+} 
+
+number1 = Number(number1);
+number2 = Number(number2);
 
 alert(`A soma dos dois números é igual a: ${sum(number1, number2)}`)
 alert(`A subtração dos dois números é igual a: ${subtraction(number1, number2)}`);
